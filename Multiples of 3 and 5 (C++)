@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int i;
+int x = 0;
+int array[1000];
+int total = 0;
+
+int main(){
+  for(i=0; i<1000; i++){
+    if(i % 3 == 0){
+      array[x] = i;
+      x++;
+    }else if(i % 5 == 0){
+      array[x] = i;
+      x++;
+    }else{
+      continue;
+    }
+  }
+  for(i=0; i<x; i++){
+    cout << array[i] << " ";
+  }
+  for(i=0; i<x; i++){
+    total = total + array[i];
+  }
+  cout << "\nThe total sum is: " << total;
+}
